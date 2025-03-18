@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 17:52:35 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 17:54:36 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/18 18:50:58 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ char	**ft_make_arg_arr(t_token *token)
 	{
 		args[i] = ft_strdup(temp->data);
 		temp = temp->next;
-		i++;T
+		i++;
 	}
 	args[i] = NULL;
 	return (args);

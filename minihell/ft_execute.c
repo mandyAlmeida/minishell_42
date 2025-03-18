@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 17:58:14 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 17:58:15 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/18 19:04:39 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,12 @@ bool	ft_find_heredoc(t_token *token)
 void	ft_update_err_code(int status)
 {
 	if (WIFSIGNALED(status))
-		ft_change_global_err(131);
+	{
+		if (status > 128)
+			ft_change_global_err(status);
+		else
+			ft_change_global_err(status + 128);
+	}
 	else
 		ft_change_global_err(WEXITSTATUS(status));
 }
