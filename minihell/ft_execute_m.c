@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_execute_m.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/18 17:52:35 by amaferre          #+#    #+#             */
+/*   Updated: 2025/03/18 17:54:36 by amaferre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../minishell.h"
 
@@ -74,7 +85,7 @@ char	**ft_make_arg_arr(t_token *token)
 	{
 		args[i] = ft_strdup(temp->data);
 		temp = temp->next;
-		i++;
+		i++;T
 	}
 	args[i] = NULL;
 	return (args);
