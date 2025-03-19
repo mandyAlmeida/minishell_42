@@ -6,7 +6,7 @@
 /*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:46:48 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 19:06:49 by estferna         ###   ########.fr       */
+/*   Updated: 2025/03/19 20:38:31 by estferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,16 +74,16 @@ typedef enum e_bultins
 
 typedef struct s_token
 {
-	char	*data;
-	t_type	type;
-	struct		s_token	*next;
+	char			*data;
+	t_type			type;
+	struct s_token	*next;
 }	t_token;
 
 typedef struct s_commands
 {
-	struct s_token	*tokens;
-	int		fd [2];
-	struct	s_commands *next;
+	struct s_token		*tokens;
+	int					fd[2];
+	struct s_commands	*next;
 }	t_commands;
 
 typedef struct s_ints
@@ -101,7 +101,7 @@ void	ft_print_cmd(t_commands *cmd);
 //------------main.c----------------
 void	client_handler(int sig);
 void	ft_set_fds(int *in, int *out);
-void	rl_replace_line(const char *, int);
+//void	rl_replace_line(const char *, int);
 
 //------------type_check.c----------------
 void	ft_data_type(t_token *token);
