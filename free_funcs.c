@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   free_funcs.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:46:52 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 15:46:54 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:48:17 by estferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void free_tokens(t_token *stack)
+void	free_tokens(t_token *stack)
 {
-	t_token *current;
+	t_token	*current;
 
 	if (NULL == stack)
-		return;
+		return ;
 	current = stack;
 	while (current)
 	{
@@ -29,13 +29,13 @@ void free_tokens(t_token *stack)
 	stack = NULL;
 }
 
-void free_cmd_tokens(t_token *stack)
+void	free_cmd_tokens(t_token *stack)
 {
-	t_token *current;
-	t_token *next;
+	t_token	*current;
+	t_token	*next;
 
 	if (NULL == stack)
-		return;
+		return ;
 	current = stack;
 	while (current)
 	{
@@ -47,9 +47,9 @@ void free_cmd_tokens(t_token *stack)
 	}
 }
 
-void ft_free_env(t_env *env)
+void	ft_free_env(t_env *env)
 {
-	t_env *tmp;
+	t_env	*tmp;
 
 	while (env != NULL)
 	{
@@ -63,12 +63,13 @@ void ft_free_env(t_env *env)
 	}
 }
 
-void ft_free_cmd(t_commands *cmd)
+void	ft_free_cmd(t_commands *cmd)
 {
-	t_commands *cur;
+	t_commands	*cur;
 
 	if (cmd == NULL)
-		return;
+		return ;
+
 	cur = cmd;
 	while (cur)
 	{
