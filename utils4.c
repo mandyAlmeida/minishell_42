@@ -6,10 +6,7 @@
 /*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 19:19:54 by estferna          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2025/03/19 16:29:33 by amaferre         ###   ########.fr       */
-=======
-/*   Updated: 2025/03/19 16:29:39 by estferna         ###   ########.fr       */
+/*   Updated: 2025/03/19 20:47:02 by estferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +36,8 @@ int	ft_token_counter_until_redd(t_token *token)
 	int	i;
 
 	i = 0;
-	while (token && token->type != R_OUT 
-		&& token->type != R_OUT2 && token->type != R_IN 
+	while (token && token->type != R_OUT
+		&& token->type != R_OUT2 && token->type != R_IN
 		&& token->type != R_IN2)
 	{
 		i++;

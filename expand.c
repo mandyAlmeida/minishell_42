@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:18:32 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/19 19:54:10 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 20:20:45 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,10 +93,10 @@ char	*ft_expand_variables(char *str, t_env *env)
 	result = (char *)ft_calloc(ft_get_full_size(str, env) + 1, sizeof(char));
 	while (str[val.i] != '\0')
 	{
-		if (ft_set_quotes_bool(str[val.i], &val.in_double_quote,\
-			&val.in_single_quote));
-		else if (str[val.i] == '$' && !val.in_single_quote &&\
-			ft_see_q_n_s(str[val.i + 1]) != SUCCESS)
+		if (ft_set_quotes_bool(str[val.i], &val.in_double_quote,
+				&val.in_single_quote));
+		else if (str[val.i] == '$' && !val.in_single_quote
+			&& ft_see_q_n_s(str[val.i + 1]) != SUCCESS)
 		{
 			env_value = ft_expand_var(str, &val.i, env);
 			ft_copy_and_free(env_value, result, &val.j);

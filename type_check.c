@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   type_check.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 19:12:54 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 19:12:55 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 20:46:08 by estferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-static int ft_check_cmd(t_token *token)
+static	int	ft_check_cmd(t_token *token)
 {
 	if (!token->data)
 		return (FAILURE);
@@ -31,9 +31,9 @@ static int ft_check_cmd(t_token *token)
 	return (FAILURE);
 }
 
-static int ft_flag_checker(t_token *token)
+static	int	ft_flag_checker(t_token *token)
 {
-	char *str;
+	char	*str;
 
 	str = token->data;
 	if (!str)
@@ -46,7 +46,7 @@ static int ft_flag_checker(t_token *token)
 	return (FAILURE);
 }
 
-void ft_data_type(t_token *token)
+void	ft_data_type(t_token *token)
 {
 	if (ft_strcmp(token->data, "<") == SUCCESS)
 		token->type = R_IN;

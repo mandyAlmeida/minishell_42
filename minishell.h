@@ -6,7 +6,7 @@
 /*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:46:48 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 20:38:31 by estferna         ###   ########.fr       */
+/*   Updated: 2025/03/19 20:55:20 by estferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ typedef struct s_commands
 {
 	struct s_token		*tokens;
 	int					fd[2];
+	int					fd [2];
 	struct s_commands	*next;
 }	t_commands;
 
@@ -154,8 +155,7 @@ int		ft_get_full_size(char *str, t_env *env);
 int		ft_get_full_size2(char *str, t_env *env);
 
 //------------utils4.c -------
-int		ft_set_quotes_bool(char c, int *in_double_quote,
-int		*in_single_quote);
+int		ft_set_quotes_bool(char c, int *in_double_quote, int *in_single_quote);
 int		ft_token_counter_until_redd(t_token *token);
 bool	ft_see_q_n_s(char a);
 void	ft_increment_int(int *c, int *size);
@@ -176,7 +176,7 @@ void	set_heredoc_signals(void);
 int		ft_heredoc_sig(int sig);
 
 //------------build_commands.c -------
-t_commands	*ft_build_commands	(t_token *token);
+t_commands	*ft_build_commands(t_token *token);
 
 //------------create_env.c -------
 void	ft_create_env(char **envp, t_env **env);
@@ -252,7 +252,7 @@ t_env	*ft_create_new(char *tit, char *cont);
 int		ft_valid_title(char *str);
 char	*ft_finecont_nomorequotes(char *cont, int i, int j, int open);
 
-//---------------- nao sei ---------------
+//-------------------------------
 char	*ft_right_path(t_token *token, t_env *env, int iswear);
 
 #endif
