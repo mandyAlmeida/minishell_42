@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:45:30 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 16:40:32 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:02:36 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *ptr, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*p;
 
 	p = (unsigned char *)ptr;

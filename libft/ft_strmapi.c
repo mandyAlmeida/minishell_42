@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:52:41 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 16:46:08 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:24:18 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
-	int	size;
-	int	c;
+	int		size;
+	int		c;
 
 	if (!s)
 		return (NULL);

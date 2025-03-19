@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:54:01 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 16:50:33 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 18:56:32 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*read_file(int fd, char *stack)
 {
 	char	*buffer;
-	int	fim;
+	int		fim;
 
 	if (!stack)
 		stack = ft_calloc_nl(1, 1);
@@ -27,11 +27,11 @@ char	*read_file(int fd, char *stack)
 	{
 		fim = read(fd, buffer, BUFFER_SIZE);
 		if (fim == -1)
-			break;
+			break ;
 		buffer[fim] = '\0';
 		stack = str_join(stack, buffer);
 		if (ft_strchr(buffer, '\n'))
-			break;
+			break ;
 	}
 	free(buffer);
 	if (!*stack || fim == -1)
@@ -89,7 +89,7 @@ char	*get_end_line(char *stack)
 char	*get_next_line(int fd)
 {
 	static char	*stack;
-	char	*line;
+	char		*line;
 
 	if (BUFFER_SIZE <= 0 || fd < 0)
 		return (NULL);

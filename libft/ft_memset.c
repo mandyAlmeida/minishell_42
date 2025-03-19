@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:49:03 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 16:43:25 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 18:58:19 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memset(void *ptr, int x, size_t n)
 {
-	size_t i;
-	unsigned char *p;
+	size_t			i;
+	unsigned char	*p;
 
 	p = (unsigned char *)ptr;
 	i = 0;

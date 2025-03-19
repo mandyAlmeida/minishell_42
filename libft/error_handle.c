@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:45:08 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 16:39:55 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:06:38 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_error_exit(char *str)
 {
-	int len;
+	int	len;
 
 	len = ft_strlen(str);
 	write(STDERR_FILENO, str, len);

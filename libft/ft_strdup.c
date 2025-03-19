@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:52:07 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 16:45:02 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:09:42 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(char const *src)
 {
-	int	c;
+	int		c;
 	char	*dest;
 
 	dest = (char *)malloc(ft_strlen(src) * sizeof(char) + 1);
@@ -32,7 +32,7 @@ char	*ft_strdup(char const *src)
 
 char	*ft_fine_strdup(char const *src, int start, int end)
 {
-	int	c;
+	int		c;
 	char	*dest;
 
 	dest = (char *)ft_calloc((end - start) + 2, sizeof(char));

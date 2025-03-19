@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:48:02 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 16:42:47 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:56:28 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memchr(const void *src, int c, size_t n)
 {
-	unsigned char *s;
-	size_t i;
+	unsigned char	*s;
+	size_t			i;
 
 	s = (unsigned char *)src;
 	i = 0;

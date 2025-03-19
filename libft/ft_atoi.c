@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:45:25 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 16:40:41 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:55:50 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int	ft_atoi(const char *str)
 	i = 0;
 	b = 1;
 	c = 0;
-	while (str[i] == '\t' || str[i] == '\r' || str[i] == ' ' || str[i] == '\f' || str[i] == '\v' || str[i] == '\n')
+	while (str[i] == '\t' || str[i] == '\r' || \
+		str[i] == ' ' || str[i] == '\f' || \
+		str[i] == '\v' || str[i] == '\n')
 		++i;
 	if (str[i] == '+' || str[i] == '-')
 	{

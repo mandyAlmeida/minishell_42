@@ -6,13 +6,13 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:42:28 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:42:31 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:22:17 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int printf_ft_putnbr_fd(int n, int fd, int c)
+int	printf_ft_putnbr_fd(int n, int fd, int c)
 {
 	if (n == -2147483648)
 	{

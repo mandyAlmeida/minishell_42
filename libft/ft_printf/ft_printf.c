@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:41:31 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:41:36 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:22:47 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,31 +96,3 @@ int	ft_println(const char *format, ...)
 	write(2, "\n", 1);
 	return (len);
 }
-/*
-int	main()
-{
-    //char *ptr= "ola bro";
-    int	i;
-    int	j;
-
-    i = 0;
-    j = 0;
-    i = ft_printf("o char é: %p\n", "ola123");
-    j = printf("o char é: %p\n", "ola123");
-    printf("o char é: %d\n", i);
-    printf("o char é: %d\n", j);
-    ft_printf("o nbr é: %i\n", 12345);
-    printf("o nbr é: %i\n", 12345);
-    ft_printf("o str é: %s\n", "oh baby a triple");
-    printf("o str é: %s\n", "oh baby a triple");
-    ft_printf("o nbr em hexa é: %x\n", 16345);
-    printf("o nbr em hexa é: %x\n", 16345);
-    ft_printf("o nbr em hexa é: %X\n", 16345);
-    printf("o nbr em hexa é: %X\n", 16345);
-    ft_printf("toma um %i %%\n", 100);
-    printf("toma um %i %%\n", 100);
-    printf("toma um %p\n", &ptr);
-
-    return (0);
-}
-*/

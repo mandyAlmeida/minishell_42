@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:50:19 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 16:44:08 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 18:57:44 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	words(char const *s, char c)
 
 static void	insert(char **split, char const *s, char c)
 {
-	char	const *temp;
+	char const	*temp;
 
 	temp = s;
 	while (*temp)
@@ -53,8 +53,8 @@ static void	insert(char **split, char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char **split;
-	int size;
+	char	**split;
+	int		size;
 
 	size = words(s, c);
 	if (!s)

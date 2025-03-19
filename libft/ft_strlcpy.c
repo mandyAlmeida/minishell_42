@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:52:31 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 16:45:45 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 18:56:09 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[c] = '\0';
 	return (ft_strlen(src));
 }
-

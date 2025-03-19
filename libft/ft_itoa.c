@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:46:50 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 16:41:48 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:15:03 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	len_nb(int long nb)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (nb == 0)
@@ -34,9 +34,9 @@ static int	len_nb(int long nb)
 
 char	*ft_itoa(int n)
 {
-	char	*dest;
-	int	size;
-	int	long nb;
+	char		*dest;
+	int			size;
+	int long	nb;
 
 	nb = n;
 	size = len_nb(nb);

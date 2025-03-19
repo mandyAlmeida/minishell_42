@@ -6,15 +6,15 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:42:36 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:42:38 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:20:42 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int printf_ft_putnbr_hexa(unsigned int nb, char *base, int fd, int c)
+int	printf_ft_putnbr_hexa(unsigned int nb, char *base, int fd, int c)
 {
-	unsigned int len;
+	unsigned int	len;
 
 	len = printf_ft_strlen(base);
 	if (nb >= len)

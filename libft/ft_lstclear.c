@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:47:18 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 16:42:01 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:14:08 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	if (!*lst || !del)
-		return;
+		return ;
 	ft_lstclear(&(*lst)->next, del);
 	(del)((*lst)->content);
 	free(*lst);

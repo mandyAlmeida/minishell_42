@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:47:34 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 16:42:09 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 18:55:47 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst)
-		return;
+		return ;
 	while (lst)
 	{
 		f(lst->content);

@@ -6,13 +6,13 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:41:58 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:42:02 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:22:23 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int printf_ft_putnbr_fd_u(unsigned int n, int fd, int c)
+int	printf_ft_putnbr_fd_u(unsigned int n, int fd, int c)
 {
 	if (n <= 0)
 	{

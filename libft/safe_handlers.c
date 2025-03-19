@@ -6,15 +6,15 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:54:36 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:54:39 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:11:02 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_safe_malloc(int size)
+void	*ft_safe_malloc(int size)
 {
-	char *mem;
+	char	*mem;
 
 	mem = malloc(size);
 	if (!mem)
@@ -22,9 +22,9 @@ void *ft_safe_malloc(int size)
 	return (mem);
 }
 
-void *ft_safe_calloc(size_t space, size_t type)
+void	*ft_safe_calloc(size_t space, size_t type)
 {
-	char *mem;
+	char	*mem;
 
 	mem = ft_calloc(space, type);
 	if (!mem)

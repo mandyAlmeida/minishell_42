@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:53:52 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 16:49:49 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:15:31 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero_nl(void *ptr, size_t n)
 {
-	size_t	i;
-	unsigned char *p;
+	size_t			i;
+	unsigned char	*p;
 
 	p = (unsigned char *)ptr;
 	i = 0;
@@ -39,7 +39,7 @@ int	str_len(const char *str)
 void	*ft_calloc_nl(size_t n, size_t size)
 {
 	void	*mem;
-	int	t;
+	int		t;
 
 	t = n * size;
 	mem = malloc(t);
@@ -49,12 +49,12 @@ void	*ft_calloc_nl(size_t n, size_t size)
 	return (mem);
 }
 
-char *str_join(char *stack, char *buffer)
+char	*str_join(char *stack, char *buffer)
 
 {
-	char *join;
-	size_t c;
-	size_t i;
+	char	*join;
+	size_t	c;
+	size_t	i;
 
 	if (!stack || !buffer)
 		return (NULL);

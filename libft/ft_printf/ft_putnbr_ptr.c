@@ -6,16 +6,16 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:42:43 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:42:46 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:23:18 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int print_ptr(unsigned long long ptr, int fd)
+static int	print_ptr(unsigned long long ptr, int fd)
 {
-	char *base;
-	int c;
+	char	*base;
+	int		c;
 
 	c = 0;
 	base = "0123456789abcdef";
@@ -29,9 +29,9 @@ static int print_ptr(unsigned long long ptr, int fd)
 	return (c);
 }
 
-int printf_ft_putnbr_ptr(unsigned long long ptr, int fd)
+int	printf_ft_putnbr_ptr(unsigned long long ptr, int fd)
 {
-	int c;
+	int	c;
 
 	c = 0;
 	if (!ptr)
