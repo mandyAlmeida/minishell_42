@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   fds_signals.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:26:18 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/19 15:46:42 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:34:42 by estferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void client_handler_inner_shell(int sig)
+void	client_handler_inner_shell(int sig)
 {
 	if (sig == SIGQUIT)
 	{
@@ -21,9 +21,9 @@ void client_handler_inner_shell(int sig)
 	}
 }
 
-void set_inner_shell_signals(void)
+void	set_inner_shell_signals(void)
 {
-	struct sigaction sa;
+	struct sigaction	sa;
 
 	sigemptyset(&sa.sa_mask);
 	sa.sa_handler = client_handler_inner_shell;
@@ -32,9 +32,9 @@ void set_inner_shell_signals(void)
 	sigaction(SIGQUIT, &sa, NULL);
 }
 
-void set_heredoc_signals(void)
+void	set_heredoc_signals(void)
 {
-	struct sigaction sa;
+	struct sigaction	sa;
 
 	sigemptyset(&sa.sa_mask);
 	sa.sa_handler = (void *)ft_heredoc_sig;
@@ -43,15 +43,15 @@ void set_heredoc_signals(void)
 	signal(SIGQUIT, SIG_IGN);
 }
 
-void ft_set_fds(int *in, int *out)
+void	ft_set_fds(int *in, int *out)
 {
 	*in = dup(STDIN_FILENO);
 	*out = dup(STDOUT_FILENO);
 }
 
-void set_up_sigaction(void)
+void	set_up_sigaction(void)
 {
-	struct sigaction sa;
+	struct sigaction	sa;
 
 	sigemptyset(&sa.sa_mask);
 	sa.sa_handler = client_handler;

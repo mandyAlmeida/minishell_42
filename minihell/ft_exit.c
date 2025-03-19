@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_exit.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 17:58:23 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 19:07:53 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:42:14 by estferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minishell.h"
 #include <stdbool.h>
 
-void ft_clean_up(t_commands *cmd, t_env **env)
+void	ft_clean_up(t_commands *cmd, t_env **env)
 {
 	ft_free_cmd(cmd);
 	ft_free_env(*env);
 }
 
-bool is_all_number(char *str)
+bool	is_all_number(char *str)
 {
-	int c;
+	int	c;
 
 	c = 0;
 	if (*str == '-' || *str == '+')
@@ -35,7 +35,7 @@ bool is_all_number(char *str)
 	return (SUCCESS);
 }
 
-void ft_exit(t_commands *cmd, t_env **env)
+void	ft_exit(t_commands *cmd, t_env **env)
 {
 	if (cmd->tokens->next == NULL)
 	{
