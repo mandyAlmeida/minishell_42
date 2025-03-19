@@ -6,18 +6,18 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 19:11:09 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 19:11:10 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:49:33 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 #include <stdbool.h>
 
-void ft_init_token(t_token *token, char *data);
+void	ft_init_token(t_token *token, char *data);
 
-bool ft_all_spaces(char *input)
+bool	ft_all_spaces(char *input)
 {
-	int c;
+	int	c;
 
 	c = 0;
 	while (input[c])
@@ -29,10 +29,10 @@ bool ft_all_spaces(char *input)
 	return (SUCCESS);
 }
 
-t_token *ft_parser(char *input)
+t_token	*ft_parser(char *input)
 {
-	char *clean_input;
-	t_token *token;
+	char	*clean_input;
+	t_token	*token;
 
 	add_history(input);
 	if (ft_all_spaces(input))
@@ -53,12 +53,12 @@ t_token *ft_parser(char *input)
 	return (NULL);
 }
 
-void ft_init_token(t_token *token, char *data)
+void	ft_init_token(t_token *token, char *data)
 {
-	char **info;
-	char *clean_input;
-	int c;
-	t_token *cur;
+	char	**info;
+	char	*clean_input;
+	int		c;
+	t_token	*cur;
 
 	c = 0;
 	clean_input = ft_input_spliter(data);

@@ -6,19 +6,20 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:43:56 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/19 16:08:21 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:52:24 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int ft_do_redirect(t_token *token);
+int	ft_do_redirect(t_token *token);
 
-int ft_handle_redirects(t_token *token)
+int	ft_handle_redirects(t_token *token)
 {
 	while (token)
 	{
-		if (token->type == R_IN || token->type == R_OUT || token->type == R_OUT2)
+		if (token->type == R_IN || token->type == R_OUT ||\
+			token->type == R_OUT2)
 		{
 			if (ft_do_redirect(token) == FAILURE)
 				return (FAILURE);
@@ -29,9 +30,9 @@ int ft_handle_redirects(t_token *token)
 	return (SUCCESS);
 }
 
-int ft_redirect_out(t_token *token)
+int	ft_redirect_out(t_token *token)
 {
-	int fd;
+	int	fd;
 
 	if (token->type == R_OUT2)
 		fd = open(token->next->data, O_WRONLY | O_CREAT | O_APPEND, 0644);
@@ -45,9 +46,9 @@ int ft_redirect_out(t_token *token)
 	return (fd);
 }
 
-int ft_redirect_in(t_token *token)
+int	ft_redirect_in(t_token *token)
 {
-	int fd;
+	int	fd;
 
 	fd = open(token->next->data, O_RDONLY);
 	if (fd > 0)
@@ -58,9 +59,9 @@ int ft_redirect_in(t_token *token)
 	return (fd);
 }
 
-int ft_do_redirect(t_token *token)
+int	ft_do_redirect(t_token *token)
 {
-	int fd;
+	int	fd;
 
 	fd = -1;
 	if (token->type == R_OUT || token->type == R_OUT2)
@@ -79,12 +80,12 @@ int ft_do_redirect(t_token *token)
 	return (SUCCESS);
 }
 
-t_token *ft_token_dup(t_token *token)
+t_token	*ft_token_dup(t_token *token)
 {
-	int size;
-	int i;
-	t_token *dup;
-	t_token *head;
+	int		size;
+	int		i;
+	t_token	*dup;
+	t_token	*head;
 
 	size = ft_token_counter_until_redd(token);
 	if (size == 0)

@@ -6,13 +6,13 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 19:05:35 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/19 16:08:38 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:50:29 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-static char *type_to_string(t_type type)
+static char	*type_to_string(t_type type)
 {
 	if (type == BUILT_IN)
 		return ("Built_in");
@@ -34,9 +34,9 @@ static char *type_to_string(t_type type)
 		return ("Str");
 }
 
-void ft_print_info(t_token *token)
+void	ft_print_info(t_token *token)
 {
-	t_token *print;
+	t_token	*print;
 
 	print = token;
 	ft_println("-----------------------");
@@ -56,10 +56,10 @@ void ft_print_info(t_token *token)
 	ft_println("-----------------------");
 }
 
-void ft_print_cmd(t_commands *cmd)
+void	ft_print_cmd(t_commands *cmd)
 {
-	t_commands *print;
-	int c;
+	t_commands	*print;
+	int			c;
 
 	c = 0;
 	print = cmd;

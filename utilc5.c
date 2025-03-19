@@ -6,13 +6,13 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 19:15:31 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/19 16:15:03 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:45:21 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-bool ft_see_spe_char(char c)
+bool	ft_see_spe_char(char c)
 {
 	if ((c > 33 && c <= 39) || (c >= 42 && c <= 47) || (c >= 58 && c <= 59))
 		return (SUCCESS);

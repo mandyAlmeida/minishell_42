@@ -6,15 +6,15 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:03:16 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/19 15:45:43 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:51:54 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int ft_see_equal(char *str)
+int	ft_see_equal(char *str)
 {
-	int c;
+	int	c;
 
 	c = 0;
 	while (str[c] && str[c] != '=')
@@ -22,10 +22,10 @@ int ft_see_equal(char *str)
 	return (c);
 }
 
-void ft_create_basic_envs(t_env **env)
+void	ft_create_basic_envs(t_env **env)
 {
-	t_env *new_node;
-	t_env *shlvl;
+	t_env	*new_node;
+	t_env	*shlvl;
 
 	new_node = malloc(sizeof(t_env));
 	new_node->title = ft_strdup("_");
@@ -38,12 +38,12 @@ void ft_create_basic_envs(t_env **env)
 	*env = new_node;
 }
 
-t_env *ft_create_env_node(char *envp_entry)
+t_env	*ft_create_env_node(char *envp_entry)
 {
-	t_env *new_node;
-	int c;
-	int shlvl;
-	char *shlvel;
+	t_env	*new_node;
+	int		c;
+	int		shlvl;
+	char	*shlvel;
 
 	new_node = malloc(sizeof(t_env));
 	if (!new_node)
@@ -63,11 +63,11 @@ t_env *ft_create_env_node(char *envp_entry)
 	return (new_node);
 }
 
-void ft_create_env(char **envp, t_env **env)
+void	ft_create_env(char **envp, t_env **env)
 {
-	int i;
-	t_env *new_node;
-	t_env *cur;
+	int		i;
+	t_env	*new_node;
+	t_env	*cur;
 
 	i = 0;
 	*env = NULL;
@@ -77,7 +77,7 @@ void ft_create_env(char **envp, t_env **env)
 	{
 		new_node = ft_create_env_node(envp[i]);
 		if (!new_node)
-			return;
+			return ;
 		if (*env == NULL)
 			*env = new_node;
 		else

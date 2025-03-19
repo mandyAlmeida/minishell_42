@@ -6,13 +6,13 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 19:08:46 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 19:08:47 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:44:55 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-static void ft_see_space(char *str, int *c, int *size)
+static void	ft_see_space(char *str, int *c, int *size)
 {
 	if (str[*c] == '>' || str[*c] == '<')
 	{
@@ -26,20 +26,20 @@ static void ft_see_space(char *str, int *c, int *size)
 		else
 		{
 			if (*c > 0 && str[*c - 1] == ' ' && str[*c + 1] == ' ')
-				return;
+				return ;
 			if (*c > 0 && str[*c - 1] != ' ')
 				(*size)++;
 			if (str[*c + 1] != ' ')
 				(*size)++;
 		}
-		return;
+		return ;
 	}
 	else
 		ft_count_helper(str, c, size);
-	return;
+	return ;
 }
 
-static void ft_set_space(char *str, char **dst, int *c, int *i)
+static void	ft_set_space(char *str, char **dst, int *c, int *i)
 {
 	if (str[*c] == '>' || str[*c] == '<')
 	{
@@ -51,23 +51,23 @@ static void ft_set_space(char *str, char **dst, int *c, int *i)
 			(*dst)[*i] = str[*c];
 			if (str[*c + 1] != ' ')
 				(*dst)[++(*i)] = ' ';
-			return;
+			return ;
 		}
 		else
 		{
 			ft_space_helper(str, dst, c, i);
-			return;
+			return ;
 		}
 	}
 	else
 		ft_space_helper(str, dst, c, i);
-	return;
+	return ;
 }
 
-int ft_clean_size(char *str)
+int	ft_clean_size(char *str)
 {
-	int c;
-	int size;
+	int	c;
+	int	size;
 
 	ft_reset_int(&c, &size);
 	ft_space_skiper(str, &c);
@@ -93,7 +93,7 @@ int ft_clean_size(char *str)
 	return (size);
 }
 
-static void ft_process_characters(char *str, char *clean_input, int *c, int *i)
+static void	ft_process_characters(char *str, char *clean_input, int *c, int *i)
 {
 	while (str[*c] != ' ' && str[*c] != '\0')
 	{
@@ -111,12 +111,12 @@ static void ft_process_characters(char *str, char *clean_input, int *c, int *i)
 	}
 }
 
-char *ft_input_spliter(char *str)
+char	*ft_input_spliter(char *str)
 {
-	int size;
-	char *clean_input;
-	int c;
-	int i;
+	int		size;
+	char	*clean_input;
+	int		c;
+	int		i;
 
 	c = 0;
 	i = 0;
