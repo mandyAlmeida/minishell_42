@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:46:48 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 19:06:49 by estferna         ###   ########.fr       */
+/*   Updated: 2025/03/19 20:22:10 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,16 +74,16 @@ typedef enum e_bultins
 
 typedef struct s_token
 {
-	char	*data;
-	t_type	type;
-	struct		s_token	*next;
+	char			*data;
+	t_type			type;
+	struct s_token	*next;
 }	t_token;
 
 typedef struct s_commands
 {
-	struct s_token	*tokens;
-	int		fd [2];
-	struct	s_commands *next;
+	struct s_token		*tokens;
+	int					fd [2];
+	struct s_commands	*next;
 }	t_commands;
 
 typedef struct s_ints

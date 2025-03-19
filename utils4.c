@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   utils4.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 19:19:54 by estferna          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2025/03/19 16:29:33 by amaferre         ###   ########.fr       */
-=======
-/*   Updated: 2025/03/19 16:29:39 by estferna         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:56:25 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "minishell.h"
 #include <stdbool.h>

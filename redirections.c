@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:43:56 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/19 19:52:24 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:57:30 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	ft_handle_redirects(t_token *token)
 {
 	while (token)
 	{
-		if (token->type == R_IN || token->type == R_OUT ||\
-			token->type == R_OUT2)
+		if (token->type == R_IN || token->type == R_OUT \
+			|| token->type == R_OUT2)
 		{
 			if (ft_do_redirect(token) == FAILURE)
 				return (FAILURE);
