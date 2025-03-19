@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   tester.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 19:05:35 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/18 19:05:36 by estferna         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:08:38 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "minishell.h"
 

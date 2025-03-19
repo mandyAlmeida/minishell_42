@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   syntax2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:53:28 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/18 18:53:29 by estferna         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:08:34 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "minishell.h"
 

@@ -3,16 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   redirections.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:43:56 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/18 18:43:57 by estferna         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:08:21 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-// #include "./libft/ft_printf"
 #include "minishell.h"
 
 int ft_do_redirect(t_token *token);

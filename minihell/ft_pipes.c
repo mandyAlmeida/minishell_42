@@ -6,13 +6,12 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:08:23 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 18:08:24 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 15:45:15 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minishell.h"
 
-// cn is the token for clean up renamed because line was too long
 void	ft_execute_n_exit(t_commands *cmd, t_env **env, int *fd, t_commands *cn)
 {
 	t_commands	*temp;

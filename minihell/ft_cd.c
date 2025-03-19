@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 15:37:19 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 15:37:20 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:03:53 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,10 +122,3 @@ void	ft_cd(t_token *token, t_env **env)
 		ft_change_pwd(*env);
 	}
 }
-
-/*
-bash: cd: pasta/: Permission denied       cd to a folder that has no permissions 
-bash: cd: HOME not set                    try to cd after unseting HOME
-bash: cd: non_existant: No such file or directory
-bash: cd: main.c: is not a foulder
-*/

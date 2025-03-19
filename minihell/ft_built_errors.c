@@ -6,13 +6,12 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 15:37:01 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 15:37:03 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:03:20 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minishell.h"
 
-// use -1 to get the error that is in there use any other to chage it
 int	ft_change_global_err(int err)
 {
 	static int	error_code;
@@ -63,8 +62,6 @@ void	ft_more_errors(t_token *tkn, t_builins err_type)
 	ft_last_errors(tkn, err_type);
 }
 
-// The error is set to 0 at the start to reset it,
-// i know it will change in this func
 void	ft_built_err(t_token *token, t_builins err_type)
 {
 	ft_change_global_err(0);
@@ -93,20 +90,3 @@ void	ft_built_err(t_token *token, t_builins err_type)
 			token->data, token->next->data);
 	ft_more_errors(token, err_type);
 }
-
-// flag errors exept env
-// env flag error is 125
-// flag errror is usually 2
-// ---------- ERRORS----------
-/*
-bash: cd: pasta/: Permission denied       cd to a folder that has no permissions 
-bash: cd: HOME not set                    try to cd after unseting HOME
-
-
-env: ‘random_text’: No such file or directory
- ****env error next command is not a tile
-env: invalid option -- 'y'						 env error with flags
-Try 'env --help' for more information.			 has no options in Minishell
-env: ‘pedro_files/’: Permission denied           env error file exists 
-
-*/

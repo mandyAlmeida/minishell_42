@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   build_commands.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 17:58:56 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/18 17:58:57 by estferna         ###   ########.fr       */
+/*   Updated: 2025/03/19 15:45:36 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "minishell.h"
 

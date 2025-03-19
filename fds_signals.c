@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   fds_signals.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:26:18 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/18 18:26:19 by estferna         ###   ########.fr       */
+/*   Updated: 2025/03/19 15:46:42 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "minishell.h"
 

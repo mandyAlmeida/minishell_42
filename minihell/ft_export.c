@@ -6,7 +6,7 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:08:12 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 18:08:13 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 15:37:02 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ void	ft_modify_env(t_env	*env, char *tit, char *cont, int i)
 		env->next = ft_create_new(tit, cont);
 }
 
-// 	f e uma flag para ver se ja existe ou nao nas envs
 char	*ft_get_title(char *str, int c)
 {
 	char	*tit;
@@ -65,7 +64,6 @@ char	*ft_get_title(char *str, int c)
 	return (tit);
 }
 
-//if i have error maybe its the if on line 167
 void	ft_change_add_env(t_env *env, char *command)
 {
 	int		c;

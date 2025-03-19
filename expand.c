@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   expand.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:18:32 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/18 18:18:33 by estferna         ###   ########.fr       */
+/*   Updated: 2025/03/19 15:46:26 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "./libft/ft_printf/ft_printf.h"
 #include "minishell.h"
@@ -58,7 +57,6 @@ static void ft_view_data(t_token **token, t_env *env)
 	}
 }
 
-// o que mudar aqui, tenho que mudar no utils3 no ft_cout_size()
 static char *ft_expand_var(char *str, int *i, t_env *env)
 {
 	int var_start;
@@ -83,9 +81,6 @@ static char *ft_expand_var(char *str, int *i, t_env *env)
 	return (NULL);
 }
 
-// TODO if i have problems here i think it must be the
-//  ft_see_quotes and spaces on line 98
-// this has a double
 char *ft_expand_variables(char *str, t_env *env)
 {
 	char *result;
