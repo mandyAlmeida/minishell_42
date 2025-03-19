@@ -6,13 +6,13 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:46:27 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:46:36 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:41:16 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c < '0' || c > '9')
 		return (0);

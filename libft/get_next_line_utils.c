@@ -6,15 +6,15 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:53:52 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:53:53 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:49:49 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero_nl(void *ptr, size_t n)
+void	ft_bzero_nl(void *ptr, size_t n)
 {
-	size_t i;
+	size_t	i;
 	unsigned char *p;
 
 	p = (unsigned char *)ptr;
@@ -26,9 +26,9 @@ void ft_bzero_nl(void *ptr, size_t n)
 	}
 }
 
-int str_len(const char *str)
+int	str_len(const char *str)
 {
-	int c;
+	int	c;
 
 	c = 0;
 	while (str[c])
@@ -36,10 +36,10 @@ int str_len(const char *str)
 	return (c);
 }
 
-void *ft_calloc_nl(size_t n, size_t size)
+void	*ft_calloc_nl(size_t n, size_t size)
 {
-	void *mem;
-	int t;
+	void	*mem;
+	int	t;
 
 	t = n * size;
 	mem = malloc(t);

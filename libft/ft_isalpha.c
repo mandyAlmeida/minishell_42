@@ -6,13 +6,13 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:45:49 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:46:02 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:41:08 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z'))
 		return (0);

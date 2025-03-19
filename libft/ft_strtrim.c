@@ -6,17 +6,17 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:53:07 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:53:08 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:49:03 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int start;
-	int end;
-	char *trim;
+	int	start;
+	int	end;
+	char	*trim;
 
 	if (!s1)
 		return (NULL);

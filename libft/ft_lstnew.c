@@ -6,15 +6,15 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:47:49 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:47:52 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:42:28 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
-	t_list *list;
+	t_list	*list;
 
 	list = malloc(sizeof(t_list));
 	if (!list)

@@ -6,15 +6,15 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:52:35 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:52:38 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:45:56 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-	int c;
+	int	c;
 
 	c = 0;
 	if (!str)
@@ -26,9 +26,9 @@ size_t ft_strlen(const char *str)
 	return (c);
 }
 
-size_t ft_arraylen(char **str)
+size_t	ft_arraylen(char **str)
 {
-	int c;
+	int	c;
 
 	c = 0;
 	while (str[c])

@@ -6,13 +6,13 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:45:19 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:45:22 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:40:00 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void free_args(char **numbers)
+void	free_args(char **numbers)
 {
 	int i;
 

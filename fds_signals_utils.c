@@ -6,15 +6,15 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:22:21 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/19 15:46:38 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:31:15 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int ft_heredoc_sig(int sig)
+int	ft_heredoc_sig(int sig)
 {
-	static bool end;
+	static bool	end;
 
 	if (sig == SIGINT)
 	{
@@ -32,7 +32,7 @@ int ft_heredoc_sig(int sig)
 	return (SUCCESS);
 }
 
-void ft_refresh_fds(int *in, int *out)
+void	ft_refresh_fds(int *in, int *out)
 {
 	dup2(*in, STDIN_FILENO);
 	dup2(*out, STDOUT_FILENO);

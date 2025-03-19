@@ -6,16 +6,16 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 19:19:54 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/19 16:15:18 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:29:33 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 #include <stdbool.h>
 
-int ft_set_quotes_bool(char c, int *in_double_quote, int *in_single_quote)
+int	ft_set_quotes_bool(char c, int *in_double_quote, int *in_single_quote)
 {
-	int done;
+	int	done;
 
 	done = 0;
 	if (c == '\'' && !*in_double_quote)
@@ -31,12 +31,14 @@ int ft_set_quotes_bool(char c, int *in_double_quote, int *in_single_quote)
 	return (done);
 }
 
-int ft_token_counter_until_redd(t_token *token)
+int	ft_token_counter_until_redd(t_token *token)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while (token && token->type != R_OUT && token->type != R_OUT2 && token->type != R_IN && token->type != R_IN2)
+	while (token && token->type != R_OUT 
+		&& token->type != R_OUT2 && token->type != R_IN 
+		&& token->type != R_IN2)
 	{
 		i++;
 		token = token->next;
@@ -44,7 +46,7 @@ int ft_token_counter_until_redd(t_token *token)
 	return (i);
 }
 
-bool ft_see_q_n_s(char a)
+bool	ft_see_q_n_s(char a)
 {
 	if (!a)
 		return (FAILURE);
@@ -53,15 +55,15 @@ bool ft_see_q_n_s(char a)
 	return (FAILURE);
 }
 
-void ft_increment_int(int *c, int *size)
+void	ft_increment_int(int *c, int *size)
 {
 	(*c)++;
 	(*size)++;
 }
 
-void ft_copy_and_free(char *env_value, char *result, int *j)
+void	ft_copy_and_free(char *env_value, char *result, int *j)
 {
-	char *mem_free;
+	char	*mem_free;
 
 	mem_free = env_value;
 	if (env_value)

@@ -6,13 +6,13 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:52:56 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:52:57 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:48:41 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *big, const char *little, size_t t)
+char	*ft_strnstr(const char *big, const char *little, size_t t)
 {
 	size_t n;
 
@@ -30,9 +30,3 @@ char *ft_strnstr(const char *big, const char *little, size_t t)
 	}
 	return (NULL);
 }
-/*int	main()
-{
-	char	str[] = "Indo eu, indo eu";
-	char	str1[] = "indo";
-	ft_putendl_fd(ft_strnstr(str, str1, ft_strlen(str)), 1);
-}*/

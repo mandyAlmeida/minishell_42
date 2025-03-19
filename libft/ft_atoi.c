@@ -6,17 +6,17 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:45:25 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:45:27 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:40:41 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int i;
-	int b;
-	int c;
+	int	i;
+	int	b;
+	int	c;
 
 	i = 0;
 	b = 1;
@@ -36,19 +36,3 @@ int ft_atoi(const char *str)
 	}
 	return (c * b);
 }
-
-/*int main()
-{
-	char str1[] = "15613";
-	char str2[] = "-15613";
-	char str3[] = "+15asd613";
-	char str4[] = "-1561dase3";
-	ft_putnbr_fd(ft_atoi(str1), 1);
-	ft_putchar_fd('\n', 1);
-	ft_putnbr_fd(ft_atoi(str2), 1);
-	ft_putchar_fd('\n', 1);
-	ft_putnbr_fd(ft_atoi(str3), 1);
-	ft_putchar_fd('\n', 1);
-	ft_putnbr_fd(ft_atoi(str4), 1);
-	ft_putchar_fd('\n', 1);
-}*/

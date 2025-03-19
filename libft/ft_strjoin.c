@@ -6,16 +6,16 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:52:18 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:52:20 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:45:24 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int size;
-	char *str;
+	int	size;
+	char	*str;
 
 	if (!s1 && !s2)
 		return (ft_strdup(""));

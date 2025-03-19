@@ -6,16 +6,16 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:52:07 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:52:10 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:45:02 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(char const *src)
+char	*ft_strdup(char const *src)
 {
-	int c;
-	char *dest;
+	int	c;
+	char	*dest;
 
 	dest = (char *)malloc(ft_strlen(src) * sizeof(char) + 1);
 	if (!dest)
@@ -30,14 +30,10 @@ char *ft_strdup(char const *src)
 	return (dest);
 }
 
-/*
-	Returns the a duple of the string with end on the end position
-	Example -> (user=myfriend, 0, 3) = user
-*/
-char *ft_fine_strdup(char const *src, int start, int end)
+char	*ft_fine_strdup(char const *src, int start, int end)
 {
-	int c;
-	char *dest;
+	int	c;
+	char	*dest;
 
 	dest = (char *)ft_calloc((end - start) + 2, sizeof(char));
 	if (!dest)

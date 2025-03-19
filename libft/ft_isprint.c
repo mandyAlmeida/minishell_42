@@ -6,13 +6,13 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:46:39 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:46:47 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:41:20 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c < 32 || c > 126)
 		return (0);

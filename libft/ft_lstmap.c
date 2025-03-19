@@ -6,16 +6,16 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:47:45 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:47:47 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:42:21 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *map;
-	t_list *tmp;
+	t_list	*map;
+	t_list	*tmp;
 
 	if (!lst || !f || !del)
 		return (NULL);

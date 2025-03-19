@@ -6,16 +6,16 @@
 /*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 14:54:01 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 14:54:02 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:50:33 by amaferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *read_file(int fd, char *stack)
+char	*read_file(int fd, char *stack)
 {
-	char *buffer;
-	int fim;
+	char	*buffer;
+	int	fim;
 
 	if (!stack)
 		stack = ft_calloc_nl(1, 1);
@@ -39,11 +39,11 @@ char *read_file(int fd, char *stack)
 	return (stack);
 }
 
-char *polish(char *stack)
+char	*polish(char *stack)
 {
-	size_t c;
-	size_t i;
-	char *polished;
+	size_t	c;
+	size_t	i;
+	char	*polished;
 
 	c = 0;
 	while (stack[c] && stack[c] != '\n')
@@ -64,11 +64,11 @@ char *polish(char *stack)
 	return (polished);
 }
 
-char *get_end_line(char *stack)
+char	*get_end_line(char *stack)
 {
-	size_t c;
-	size_t i;
-	char *linha;
+	size_t	c;
+	size_t	i;
+	char	*linha;
 
 	c = 0;
 	if (!stack[c])
@@ -86,10 +86,10 @@ char *get_end_line(char *stack)
 	return (linha);
 }
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
-	static char *stack;
-	char *line;
+	static char	*stack;
+	char	*line;
 
 	if (BUFFER_SIZE <= 0 || fd < 0)
 		return (NULL);
