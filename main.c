@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:45:41 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 15:17:26 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:16:17 by estferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void client_handler(int sig)
+void	client_handler(int sig)
 {
 	if (sig == SIGINT)
 	{
@@ -24,10 +24,10 @@ void client_handler(int sig)
 	}
 }
 
-void ft_transform_t_to_s(char **str)
+void	ft_transform_t_to_s(char **str)
 {
-	char *temp;
-	int c;
+	char	*temp;
+	int		c;
 
 	temp = *str;
 	c = 0;
@@ -42,10 +42,10 @@ void ft_transform_t_to_s(char **str)
 	}
 }
 
-void ft_cicle(int fd_in, int fd_out, t_env **env)
+void	ft_cicle(int fd_in, int fd_out, t_env **env)
 {
-	char *input;
-	t_token *token;
+	char	*input;
+	t_token	*token;
 
 	while (1)
 	{
@@ -56,7 +56,7 @@ void ft_cicle(int fd_in, int fd_out, t_env **env)
 			free(input);
 			ft_free_env(*env);
 			ft_println("exit");
-			break;
+			break ;
 		}
 		else if (*input)
 		{
@@ -71,11 +71,11 @@ void ft_cicle(int fd_in, int fd_out, t_env **env)
 	}
 }
 
-int main(int c, char **v, char **envp)
+int	main(int c, char **v, char **envp)
 {
-	t_env *env;
-	int fd_in;
-	int fd_out;
+	t_env	*env;
+	int		fd_in;
+	int		fd_out;
 
 	(void)c;
 	(void)v;

@@ -6,7 +6,7 @@
 /*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:46:52 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 16:48:17 by estferna         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:22:36 by estferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ void	ft_free_cmd(t_commands *cmd)
 
 	if (cmd == NULL)
 		return ;
-
 	cur = cmd;
 	while (cur)
 	{

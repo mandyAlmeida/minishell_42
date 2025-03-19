@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   expand.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:18:32 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/19 15:46:26 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:40:38 by estferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 #include "minishell.h"
 #include <stdbool.h>
 
-static char *ft_expand_var(char *str, int *i, t_env *env);
-static void ft_view_data(t_token **token, t_env *env);
+static	char	*ft_expand_var(char *str, int *i, t_env *env);
+static	void	ft_view_data(t_token **token, t_env *env);
 
-void ft_find_expand(t_token **token, t_env *env)
+void	ft_find_expand(t_token **token, t_env *env)
 {
-	t_token *cur;
+	t_token	*cur;
 
 	cur = *token;
 	while (cur)
@@ -29,19 +29,19 @@ void ft_find_expand(t_token **token, t_env *env)
 	}
 }
 
-static void ft_view_data(t_token **token, t_env *env)
+static	void	ft_view_data(t_token **token, t_env *env)
 {
-	t_token *cur;
-	char *str;
+	t_token	*cur;
+	char	*str;
 
 	cur = *token;
 	if (!cur->data)
-		return;
+		return ;
 	str = ft_strchr(cur->data, '$');
 	if (str)
 	{
 		if (!*++str)
-			return;
+			return ;
 		else
 		{
 			str = ft_expand_variables(cur->data, env);
@@ -57,14 +57,16 @@ static void ft_view_data(t_token **token, t_env *env)
 	}
 }
 
-static char *ft_expand_var(char *str, int *i, t_env *env)
+static	char	*ft_expand_var(char *str, int *i, t_env *env)
 {
-	int var_start;
-	char *var_name;
-	t_env *content;
+	int		var_start;
+	char	*var_name;
+	t_env	*content;
 
 	var_start = *i;
-	while (str[*i + 1] != ' ' && str[*i + 1] != '\0' && str[*i + 1] != '"' && str[*i + 1] != '\'' && str[*i + 1] != '$' && str[*i + 1] != '\n' && str[*i + 1] != '\t')
+	while (str[*i + 1] != ' ' && str[*i + 1] != '\0' && str[*i + 1] != '"' \
+		&& str[*i + 1] != '\'' && str[*i + 1] != '$' && str[*i + 1] != '\n'\
+		&& str[*i + 1] != '\t')
 		(*i)++;
 	var_name = ft_fine_strdup(str, var_start, *i);
 	if (ft_strcmp((var_name + 1), "?") == SUCCESS)
@@ -81,20 +83,20 @@ static char *ft_expand_var(char *str, int *i, t_env *env)
 	return (NULL);
 }
 
-char *ft_expand_variables(char *str, t_env *env)
+char	*ft_expand_variables(char *str, t_env *env)
 {
-	char *result;
-	char *env_value;
-	t_ints val;
+	char	*result;
+	char	*env_value;
+	t_ints	val;
 
 	val = (t_ints){.i = 0, .j = 0, .in_single_quote = 0, .in_double_quote = 0};
 	result = (char *)ft_calloc(ft_get_full_size(str, env) + 1, sizeof(char));
 	while (str[val.i] != '\0')
 	{
-		if (ft_set_quotes_bool(str[val.i], &val.in_double_quote,
-													 &val.in_single_quote))
-			;
-		else if (str[val.i] == '$' && !val.in_single_quote && ft_see_q_n_s(str[val.i + 1]) != SUCCESS)
+		if (ft_set_quotes_bool(str[val.i], &val.in_double_quote,\
+			&val.in_single_quote));
+		else if (str[val.i] == '$' && !val.in_single_quote &&\
+			ft_see_q_n_s(str[val.i + 1]) != SUCCESS)
 		{
 			env_value = ft_expand_var(str, &val.i, env);
 			ft_copy_and_free(env_value, result, &val.j);
@@ -107,18 +109,19 @@ char *ft_expand_variables(char *str, t_env *env)
 	return (result);
 }
 
-char *ft_expand_variables2(char *str, t_env *env)
+char	*ft_expand_variables2(char *str, t_env *env)
 {
-	char *result;
-	char *env_value;
-	char *mem_free;
-	t_ints val;
+	char	*result;
+	char	*env_value;
+	char	*mem_free;
+	t_ints	val;
 
 	val = (t_ints){.i = 0, .j = 0, .in_single_quote = 0, .in_double_quote = 0};
 	result = (char *)ft_calloc(ft_get_full_size2(str, env) + 1, sizeof(char));
 	while (str[val.i] != '\0')
 	{
-		if (str[val.i] == '$' && str[val.i + 1] != ' ' && str[val.i + 1] != '\'' && str[val.i + 1] != '\"')
+		if (str[val.i] == '$' && str[val.i + 1] != ' ' \
+			&& str[val.i + 1] != '\'' && str[val.i + 1] != '\"')
 		{
 			env_value = ft_expand_var(str, &val.i, env);
 			mem_free = env_value;

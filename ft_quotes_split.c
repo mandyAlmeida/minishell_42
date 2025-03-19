@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_quotes_split.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:48:23 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/19 15:48:27 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:01:27 by estferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void ft_skip(char **str, char i)
+void	ft_skip(char **str, char i)
 {
 	(*str)++;
 	while ((**str) || (**str) != '\0')
@@ -20,16 +20,16 @@ void ft_skip(char **str, char i)
 		if ((**str) == i)
 		{
 			(*str)++;
-			return;
+			return ;
 		}
 		(*str)++;
 	}
-	return;
+	return ;
 }
 
-int words_quotes(char *s, char c)
+int	words_quotes(char *s, char c)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	while (*s)
@@ -49,9 +49,9 @@ int words_quotes(char *s, char c)
 	return (count);
 }
 
-static void insert(char **split, char *s, char c)
+static void	insert(char **split, char *s, char c)
 {
-	char *temp;
+	char	*temp;
 
 	temp = s;
 	while (*temp)
@@ -76,10 +76,10 @@ static void insert(char **split, char *s, char c)
 	*split = NULL;
 }
 
-char **ft_quotes_split(char *s, char c)
+char	**ft_quotes_split(char *s, char c)
 {
-	char **split;
-	int size;
+	char	**split;
+	int		size;
 
 	size = words_quotes(s, c);
 	if (!s)

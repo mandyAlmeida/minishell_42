@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   utils3.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 19:19:30 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 19:19:31 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:30:23 by estferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
 #include "minishell.h"
 
-t_env *ft_get_content(t_env *env, char *title)
+t_env	*ft_get_content(t_env *env, char *title)
 {
-	t_env *cur;
+	t_env	*cur;
 
 	cur = env;
 	while (cur)
@@ -27,14 +27,17 @@ t_env *ft_get_content(t_env *env, char *title)
 	return (NULL);
 }
 
-static void ft_cout_size(char *str, t_env *env, int *i, int *total_length)
+static	void	ft_cout_size(char *str, t_env *env, int *i, int *total_length)
 {
-	t_env *content;
-	char *var_name;
-	int start;
+	t_env	*content;
+	char	*var_name;
+	int		start;
 
 	start = *i;
-	while (str[*i + 1] != ' ' && str[*i + 1] != '\0' && str[*i + 1] != '$' && str[*i + 1] != '"' && str[*i + 1] != '\'' && str[*i + 1] != '\n' && str[*i + 1] != '\t')
+	while (str[*i + 1] != ' ' && str[*i + 1] != '\0'
+		&& str[*i + 1] != '$' && str[*i + 1] != '"'
+		&& str[*i + 1] != '\'' && str[*i + 1] != '\n'
+		&& str[*i + 1] != '\t');
 		(*i)++;
 	var_name = ft_fine_strdup(str, start, *i);
 	if (ft_see_spe_char(*(var_name + 1)) == SUCCESS)
@@ -47,17 +50,17 @@ static void ft_cout_size(char *str, t_env *env, int *i, int *total_length)
 		*total_length += 20;
 }
 
-int ft_get_full_size(char *str, t_env *env) // this has a double
+int	ft_get_full_size(char *str, t_env *env) // this has a double
 {
-	int total_length;
-	t_ints val;
+	int	total_length;
+	t_ints	val;
 
 	total_length = 0;
 	val = (t_ints){.i = 0, .j = 0, .in_single_quote = 0, .in_double_quote = 0};
 	while (str[val.i] != '\0')
 	{
 		if (ft_set_quotes_bool(str[val.i], &val.in_double_quote,
-													 &val.in_single_quote))
+													&val.in_single_quote))
 			;
 		else if (str[val.i] == '$' && !val.in_single_quote && str[val.i + 1] != ' ' && str[val.i + 1] != '\'' && str[val.i + 1] != '\"')
 			ft_cout_size(str, env, &val.i, &total_length);
@@ -68,16 +71,17 @@ int ft_get_full_size(char *str, t_env *env) // this has a double
 	return (total_length);
 }
 
-int ft_get_full_size2(char *str, t_env *env)
+int	ft_get_full_size2(char *str, t_env *env)
 {
-	int total_length;
-	t_ints val;
+	int		total_length;
+	t_ints	val;
 
 	total_length = 0;
 	val = (t_ints){.i = 0, .j = 0, .in_single_quote = 0, .in_double_quote = 0};
 	while (str[val.i] != '\0')
 	{
-		if (str[val.i] == '$' && str[val.i + 1] != ' ' && str[val.i + 1] != '\'' && str[val.i + 1] != '\"')
+		if (str[val.i] == '$' && str[val.i + 1] != ' ' &&
+			 str[val.i + 1] != '\'' && str[val.i + 1] != '\"')
 			ft_cout_size(str, env, &val.i, &total_length);
 		else
 			total_length++;

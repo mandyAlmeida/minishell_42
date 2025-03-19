@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   syntax.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:46:43 by estferna          #+#    #+#             */
-/*   Updated: 2025/03/19 16:08:29 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:19:07 by estferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-static int ft_syntax_1place(char *input, int *c)
+static	int	ft_syntax_1place(char *input, int *c)
 {
 	while (input[*c] == ' ' || input[*c] == '\t')
 		(*c)++;
@@ -23,7 +23,7 @@ static int ft_syntax_1place(char *input, int *c)
 	return (SUCCESS);
 }
 
-int ft_skip_quotes(char *input, int *c, char i)
+int	ft_skip_quotes(char *input, int *c, char i)
 {
 	(*c)++;
 	while (input[*c] || input[*c] != '\0')
@@ -35,9 +35,9 @@ int ft_skip_quotes(char *input, int *c, char i)
 	return (FAILURE);
 }
 
-int ft_syntax_pipes(char *input)
+int	ft_syntax_pipes(char *input)
 {
-	int c;
+	int	c;
 
 	c = 0;
 	if (ft_syntax_1place(input, &c) != SUCCESS)
@@ -62,11 +62,11 @@ int ft_syntax_pipes(char *input)
 	return (SUCCESS);
 }
 
-static int ft_redirect_type(char *input)
+static	int	ft_redirect_type(char *input)
 {
-	bool left;
-	bool right;
-	int c;
+	bool	left;
+	bool	right;
+	int		c;
 
 	left = false;
 	right = false;
@@ -80,7 +80,7 @@ static int ft_redirect_type(char *input)
 		if (input[c] == '>')
 			right = true;
 		if (input[c] != '>' && input[c] != '<')
-			break;
+			break ;
 		c++;
 	}
 	if (left && right)
@@ -88,9 +88,9 @@ static int ft_redirect_type(char *input)
 	return (SUCCESS);
 }
 
-int ft_syntax_redirects(char *input)
+int	ft_syntax_redirects(char *input)
 {
-	int c;
+	int	c;
 
 	c = 0;
 	if (ft_syntax_1place(input, &c) != SUCCESS)

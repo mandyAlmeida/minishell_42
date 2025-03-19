@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 19:17:01 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 19:17:02 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:34:03 by estferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int ft_strcmp(const char *s1, const char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	int c;
+	int	c;
 
 	c = 0;
 	if (ft_strlen(s2) > ft_strlen(s1))
@@ -28,10 +28,10 @@ int ft_strcmp(const char *s1, const char *s2)
 	return (SUCCESS);
 }
 
-int ft_check_triples(char *input)
+int	ft_check_triples(char *input)
 {
-	int c;
-	int i;
+	int	c;
+	int	i;
 
 	c = 0;
 	i = 0;
@@ -46,9 +46,9 @@ int ft_check_triples(char *input)
 	return (SUCCESS);
 }
 
-int ft_space_redirect(char *input)
+int	ft_space_redirect(char *input)
 {
-	int c;
+	int	c;
 
 	c = 0;
 	if (input[c] == '>' || input[c] == '<')
@@ -60,11 +60,11 @@ int ft_space_redirect(char *input)
 	return (SUCCESS);
 }
 
-char *ft_strcat(char *str1, char *str2)
+char	*ft_strcat(char *str1, char *str2)
 {
-	int size;
-	int c;
-	char *str;
+	int		size;
+	int		c;
+	char	*str;
 
 	c = 0;
 	size = ft_strlen(str1) + ft_strlen(str2);
@@ -83,13 +83,13 @@ char *ft_strcat(char *str1, char *str2)
 	return (str);
 }
 
-char *ft_array_strjoin(char **array)
+char	*ft_array_strjoin(char **array)
 {
-	int size;
-	int c;
-	int i;
-	char *str;
-	char *temp;
+	int		size;
+	int		c;
+	int		i;
+	char	*str;
+	char	*temp;
 
 	size = 0;
 	c = -1;

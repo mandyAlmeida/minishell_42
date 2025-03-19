@@ -3,28 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   heredoc.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaferre <amaferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: estferna <estferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:44:06 by amaferre          #+#    #+#             */
-/*   Updated: 2025/03/18 18:44:07 by amaferre         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:11:59 by estferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void ft_write_to_file(const char *filename, char *str, t_env *env, bool d);
-void ft_change_heredoc(t_token **token, t_env *env);
-char *ft_read_heredoc(char *str);
+void	ft_write_to_file(const char *filename, char *str, t_env *env, bool d);
+void	ft_change_heredoc(t_token **token, t_env *env);
+char	*ft_read_heredoc(char *str);
 
-int event(void)
+int	event(void)
 {
 	return (0);
 }
 
-void ft_build_heredoc(t_commands **cmd, t_commands *head, t_env *env)
+void	ft_build_heredoc(t_commands **cmd, t_commands *head, t_env *env)
 {
-	t_token *token;
-	t_commands *command;
+	t_token		*token;
+	t_commands	*command;
 
 	set_heredoc_signals();
 	command = *cmd;
@@ -36,22 +36,22 @@ void ft_build_heredoc(t_commands **cmd, t_commands *head, t_env *env)
 			if (token->type == R_IN2)
 				ft_change_heredoc(&token, env);
 			if (ft_heredoc_sig(-1) == FAILURE)
-				break;
+				break ;
 			token = token->next;
 		}
 		if (ft_heredoc_sig(-1) == FAILURE)
-			break;
+			break ;
 		command = command->next;
 	}
 	*cmd = head;
 }
 
-void ft_change_heredoc(t_token **token, t_env *env)
+void	ft_change_heredoc(t_token **token, t_env *env)
 {
-	t_token *changer;
-	char *buffer;
-	bool d;
-	char *str;
+	t_token	*changer;
+	char	*buffer;
+	bool	d;
+	char	*str;
 
 	d = true;
 	changer = (*token);
@@ -73,10 +73,10 @@ void ft_change_heredoc(t_token **token, t_env *env)
 	free(str);
 }
 
-char *ft_read_heredoc(char *str)
+char	*ft_read_heredoc(char *str)
 {
-	char *buffer;
-	char *line;
+	char	*buffer;
+	char	*line;
 
 	buffer = ft_calloc(1, sizeof(char));
 	while (1)
@@ -88,12 +88,12 @@ char *ft_read_heredoc(char *str)
 		if (!line)
 		{
 			ft_println("Error: unexpected EOF - Should be (wanted `%s')", str);
-			break;
+			break ;
 		}
 		if (ft_strcmp(line, str) == SUCCESS)
 		{
 			free(line);
-			break;
+			break ;
 		}
 		buffer = ft_strjoin_free(buffer, line);
 		buffer = ft_strjoin_free(buffer, "\n");
@@ -102,10 +102,10 @@ char *ft_read_heredoc(char *str)
 	return (buffer);
 }
 
-void ft_write_to_file(const char *filename, char *str, t_env *env, bool d)
+void	ft_write_to_file(const char *filename, char *str, t_env *env, bool d)
 {
-	int file;
-	char *expanded;
+	int		file;
+	char	*expanded;
 
 	expanded = str;
 	if (d)
@@ -114,7 +114,7 @@ void ft_write_to_file(const char *filename, char *str, t_env *env, bool d)
 	if (file < 0)
 	{
 		perror("Error opening file heredoc");
-		return;
+		return ;
 	}
 	write(file, expanded, ft_strlen(expanded));
 	if (close(file) < 0)
